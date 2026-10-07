@@ -1,4 +1,21 @@
 body{
     width: 900px;
     margin: 10px auto;
+    color: white;
+    background-color: black;
+}
+header{
+    background-color:yellow;
+    border-bottom: 4px solid cyan;
+    padding: 30px;
+    color: black;
+}
+a{
+    color:cyan;
+}
+h2{
+    color:yellow;
+}
+strong{
+    color:lemonchiffon
 }
