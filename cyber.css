@@ -38,3 +38,44 @@ li:hover{
 ol{
     padding: 0px;
 }
+footer{
+    background-color:yellow;
+    border-top: 4px solid cyan;
+    padding: 30px;
+    color: black;
+    text-align: center;
+}
+#redes-sociales{
+    text-align: left;
+    vertical-align: bottom;
+}
+#enlaces>li>a{
+    color :white;
+    text-align: center;
+    margin: auto;
+   
+}
+#enlaces>li{
+    background-color: black;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+}
+#enlaces>li:hover{
+    background-color: yellow;
+}
+#enlaces>li:hover>a{
+    color: black;
+}
+#enlaces-web{
+    text-align: center;
+    background-color: yellow;
+    border-bottom: 4px solid cyan;
+    color: black;
+    padding: 10px;
+    margin: 0px;
+}
+                                                                                                                                           
