@@ -1,0 +1,55 @@
+body{
+    margin: auto;
+    color: white;
+    background-color: black;
+}
+header{
+    background-color:yellow;
+    border-bottom: 4px solid cyan;
+    padding: 30px;
+    color: black;
+    text-align: center;
+}
+main{
+    width: 1200px;
+    margin: auto;
+}
+li>a{
+    color:black;
+    text-decoration: none;
+}
+a{
+    color:cyan;
+}
+footer{
+    background-color:yellow;
+    border-top: 4px solid cyan;
+    padding: 30px;
+    color: black;
+    text-align: center;
+}
+#redes-sociales{
+    text-align: left;
+    vertical-align: bottom;
+}
+label, input{
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+ }
+li{
+    display:inline-block;
+    width: 20%;
+    text-align:center;
+}
+li:hover{
+    background-color:gold;
+    border-radius: 10px;
+}
+ol{
+    padding: 0px;
+}
+#migajillas{
+    text-align: left;
+    margin: 10px;
+}

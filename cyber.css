@@ -34,6 +34,7 @@ li{
 }
 li:hover{
     background-color:gold;
+    border-radius: 10px;
 }
 ol{
     padding: 0px;
@@ -77,5 +78,24 @@ footer{
     color: black;
     padding: 10px;
     margin: 0px;
+}
+.material-symbols-outlined {
+         font-variation-settings:
+         'FILL' 0,
+          'wght' 400,
+            'GRAD' 0,
+          'opsz' 24
+        }  
+#volver-al-menu{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 50px;
+    color: gold;
+} 
+#migajillas{
+    text-align: left;
+    margin: 10px;
+    color:inherit
 }
                                                                                                                                            
