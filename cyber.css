@@ -32,10 +32,7 @@ li{
     width: 20%;
     text-align:center;
 }
-li:hover{
-    background-color:gold;
-    border-radius: 10px;
-}
+
 ol{
     padding: 0px;
 }
@@ -97,5 +94,9 @@ footer{
     text-align: left;
     margin: 10px;
     color:inherit
+}
+li:hover{
+    background-color:gold;
+    border-radius: 10px;
 }
                                                                                                                                            
