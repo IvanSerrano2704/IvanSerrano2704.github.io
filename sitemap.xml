@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset>
-    <url>
-        <loc>https://ivanserrano2704.github.io</loc>
-        <priority>1.00</priority>
-        <lastmod>2026-10-28T12:00:00</lastmod>
-    </url>
-    <url>
-        <loc>https://ivanserrano2704.github.io/enlaces.html</loc>
-        <priority>0.80</priority>
-        <lastmod>2026-10-28T12:00:00</lastmod>
-    </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://ivanserrano2704.github.io/</loc>
+<lastmod>2026-11-19T08:52:14+00:00</lastmod>
+<priority>1.0000</priority>
+</url>
+<url>
+<loc>https://ivanserrano2704.github.io/index.html</loc>
+<lastmod>2026-11-19T08:52:14+00:00</lastmod>
+<priority>0.8000</priority>
+</url>
+<url>
+<loc>https://ivanserrano2704.github.io/Contactame</loc>
+<lastmod>2026-11-19T08:52:14+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://ivanserrano2704.github.io/enlaces</loc>
+<lastmod>2026-11-19T08:52:14+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
 </urlset>
