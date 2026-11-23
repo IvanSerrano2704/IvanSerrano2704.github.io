@@ -1,0 +1,601 @@
+body{
+    margin: auto;
+    color: white;
+    background-color: black;
+}
+.header {
+    background-color: #080808;
+    border-bottom: 2px solid #ffe600;
+    padding: 18px 30px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 3px 15px rgba(255, 230, 0, 0.2);
+}
+.header-logo h1 {
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.header-logo h1 span {
+    color: #ffe600;
+    text-shadow: 0 0 10px rgba(255, 230, 0, 0.5);
+}
+.header-logo p {
+    color: #ffe600;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin: 5px 0 0;
+}
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.navegacion a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navegacion a:hover {
+    color: #ffe600;
+    text-shadow: 0 0 10px #ffe600;
+}
+.navegacion a.activo {
+    border: 1px solid #ffe600;
+    padding: 9px 16px;
+    border-radius: 5px;
+    color: #ffe600;
+    box-shadow: 0 0 10px rgba(255, 230, 0, 0.2);
+}
+
+.navegacion .activo:hover {
+    background-color: #ffe600;
+    color: #080808;
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
+}
+
+/* MÓVILES */
+
+@media (max-width: 750px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+.footer {
+    background-color: #080808;
+    border-top: 2px solid #ffe600;
+    margin: 0;
+    margin-top: 60px;
+    padding: 40px 30px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -5px 20px rgba(255, 230, 0, 0.12);
+}
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+.footer-info h2 {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.footer-info h2 span {
+    color: #ffe600;
+}
+.footer-info p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 300px;
+}
+.footer h3 {
+    color: #ffe600;
+    font-size: 14px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+.footer-enlaces a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+.footer-enlaces a:hover {
+    color: #ffe600;
+    padding-left: 5px;
+    text-shadow: 0 0 8px #ffe600;
+}
+.footer-extra p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.footer-final {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-final p {
+    color: #777;
+    font-size: 11px;
+}
+
+.footer-final p:last-child {
+    color: #ffe600;
+    letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-final {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+
+
+/* =========================
+   NIGHT CITY - ESTILOS
+========================= */
+
+.nc-page {
+    --nc-yellow: #ffe600;
+    --nc-bg: #080808;
+    --nc-panel: #111111;
+    --nc-text: #d0d0d0;
+    --nc-muted: #858585;
+
+    background-color: var(--nc-bg);
+    color: var(--nc-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   HERO / PORTADA
+========================= */
+
+.nc-hero {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.98) 0%,
+            rgba(0, 0, 0, 0.85) 55%,
+            rgba(0, 0, 0, 0.35) 100%),
+        linear-gradient(135deg, #292400, #111111 60%, #252525);
+
+    border-bottom: 1px solid var(--nc-yellow);
+}
+
+/* Decoración de líneas */
+.nc-hero::after {
+    content: "";
+    position: absolute;
+    right: 8%;
+    top: 15%;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(255, 230, 0, 0.18);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.nc-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.nc-label {
+    color: var(--nc-yellow);
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.nc-hero h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    color: var(--nc-yellow);
+    margin: 0;
+    line-height: 0.95;
+    letter-spacing: -4px;
+    font-weight: 900;
+}
+
+.nc-subtitle {
+    max-width: 500px;
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 25px 0;
+    color: #d1d1d1;
+}
+
+.nc-button {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 1px solid var(--nc-yellow);
+    color: var(--nc-yellow);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.nc-button:hover {
+    background-color: var(--nc-yellow);
+    color: #000;
+}
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+
+.nc-section {
+    padding: 80px 10%;
+}
+
+.nc-section-title {
+    margin-bottom: 40px;
+    border-left: 3px solid var(--nc-yellow);
+    padding-left: 18px;
+}
+
+.nc-section-title span {
+    color: var(--nc-yellow);
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.nc-section-title h2 {
+    color: white;
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 12px 0 0;
+    font-weight: 800;
+}
+
+.nc-section-description {
+    color: var(--nc-muted);
+    max-width: 700px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   INTRODUCCIÓN
+========================= */
+
+.nc-intro {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.nc-intro-text h3 {
+    color: var(--nc-yellow);
+    font-size: 24px;
+    margin: 0 0 25px;
+}
+
+.nc-intro-text p,
+.nc-corp-text p,
+.nc-life-content p {
+    color: var(--nc-text);
+    line-height: 1.9;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.nc-intro-quote {
+    padding: 35px;
+    background-color: var(--nc-panel);
+    border: 1px solid #2a2a2a;
+    border-top: 2px solid var(--nc-yellow);
+}
+
+.nc-quote-mark {
+    color: var(--nc-yellow);
+    font-size: 70px;
+    line-height: 0.5;
+    display: block;
+}
+
+.nc-intro-quote p {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.nc-quote-author {
+    font-size: 11px;
+    color: var(--nc-yellow);
+    letter-spacing: 2px;
+}
+
+/* =========================
+   CONTRASTES
+========================= */
+
+.nc-contrast {
+    background-color: #0d0d0d;
+}
+
+.nc-contrast-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.nc-contrast-card {
+    min-height: 250px;
+    padding: 35px;
+    border: 1px solid #333;
+    position: relative;
+    background: #151515;
+    transition: 0.3s;
+}
+
+.nc-contrast-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--nc-yellow);
+}
+
+.nc-card-number {
+    font-size: 13px;
+    color: var(--nc-yellow);
+    letter-spacing: 2px;
+}
+
+.nc-contrast-card h3 {
+    font-size: 28px;
+    color: white;
+    margin: 25px 0 15px;
+}
+
+.nc-contrast-card p {
+    color: var(--nc-text);
+    line-height: 1.8;
+}
+
+.nc-rich {
+    background:
+        linear-gradient(145deg, #27230a, #141414 55%);
+}
+
+.nc-poor {
+    background:
+        linear-gradient(145deg, #222222, #101010 55%);
+}
+
+/* =========================
+   CORPORACIONES
+========================= */
+
+.nc-corp-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.nc-corp-text h3 {
+    color: var(--nc-yellow);
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.nc-corp-highlight {
+    background-color: #151515;
+    padding: 40px;
+    border: 1px solid #333;
+    border-left: 3px solid var(--nc-yellow);
+}
+
+.nc-corp-highlight span {
+    color: var(--nc-muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.nc-corp-highlight h3 {
+    font-size: clamp(23px, 3vw, 36px);
+    line-height: 1.5;
+    color: var(--nc-yellow);
+    margin-top: 25px;
+}
+
+/* =========================
+   DISTRITOS
+========================= */
+
+.nc-districts {
+    background-color: #0d0d0d;
+}
+
+.nc-district-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.nc-district {
+    min-height: 180px;
+    padding: 25px;
+    border: 1px solid #303030;
+    background: linear-gradient(135deg, #181818, #101010);
+    transition: 0.3s;
+}
+
+.nc-district:hover {
+    border-color: var(--nc-yellow);
+    background: #1c1c15;
+}
+
+.nc-district-info span {
+    color: var(--nc-yellow);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.nc-district-info h3 {
+    font-size: 22px;
+    color: white;
+    margin: 12px 0;
+}
+
+.nc-district-info p {
+    color: var(--nc-text);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* =========================
+   VIDA EN NIGHT CITY
+========================= */
+
+.nc-life-content {
+    max-width: 850px;
+}
+
+.nc-life-final {
+    border-left: 2px solid var(--nc-yellow);
+    padding: 20px;
+    background-color: #141414;
+    color: var(--nc-yellow) !important;
+    font-size: 19px !important;
+    font-weight: bold;
+    margin-top: 35px;
+}
+
+/* =========================
+   CIERRE
+========================= */
+
+.nc-ending {
+    padding: 90px 10%;
+    text-align: center;
+    border-top: 1px solid #333;
+
+    background:
+        linear-gradient(135deg, #1b1805, #080808 65%);
+}
+
+.nc-ending span {
+    color: var(--nc-yellow);
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.nc-ending h2 {
+    font-size: clamp(35px, 6vw, 65px);
+    color: white;
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.nc-ending p {
+    color: var(--nc-text);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .nc-intro,
+    .nc-corp-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .nc-hero {
+        padding: 60px 7%;
+    }
+
+    .nc-section {
+        padding: 60px 7%;
+    }
+
+    .nc-contrast-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .nc-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .nc-subtitle {
+        font-size: 16px;
+    }
+
+    .nc-district-list {
+        grid-template-columns: 1fr;
+    }
+
+    .nc-contrast-card,
+    .nc-corp-highlight {
+        padding: 25px;
+    }
+
+    .nc-ending {
+        padding: 65px 7%;
+    }
+
+    .nc-ending span {
+        letter-spacing: 2px;
+    }
+
+}

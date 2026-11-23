@@ -1,0 +1,795 @@
+body{
+    margin: auto;
+    color: white;
+    background-color: black;
+}
+.header {
+    background-color: #080808;
+    border-bottom: 2px solid #ffe600;
+    padding: 18px 30px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 3px 15px rgba(255, 230, 0, 0.2);
+}
+.header-logo h1 {
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.header-logo h1 span {
+    color: #ffe600;
+    text-shadow: 0 0 10px rgba(255, 230, 0, 0.5);
+}
+.header-logo p {
+    color: #ffe600;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin: 5px 0 0;
+}
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.navegacion a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navegacion a:hover {
+    color: #ffe600;
+    text-shadow: 0 0 10px #ffe600;
+}
+.navegacion a.activo {
+    border: 1px solid #ffe600;
+    padding: 9px 16px;
+    border-radius: 5px;
+    color: #ffe600;
+    box-shadow: 0 0 10px rgba(255, 230, 0, 0.2);
+}
+
+.navegacion .activo:hover {
+    background-color: #ffe600;
+    color: #080808;
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
+}
+
+/* MÓVILES */
+
+@media (max-width: 750px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+.footer {
+    background-color: #080808;
+    border-top: 2px solid #ffe600;
+    margin: 0;
+    margin-top: 60px;
+    padding: 40px 30px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -5px 20px rgba(255, 230, 0, 0.12);
+}
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+.footer-info h2 {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.footer-info h2 span {
+    color: #ffe600;
+}
+.footer-info p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 300px;
+}
+.footer h3 {
+    color: #ffe600;
+    font-size: 14px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+.footer-enlaces a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+.footer-enlaces a:hover {
+    color: #ffe600;
+    padding-left: 5px;
+    text-shadow: 0 0 8px #ffe600;
+}
+.footer-extra p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.footer-final {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-final p {
+    color: #777;
+    font-size: 11px;
+}
+
+.footer-final p:last-child {
+    color: #ffe600;
+    letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-final {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+
+
+/* ============================
+   CYBERWARE - ESTILO GENERAL
+============================ */
+
+.cyber-page {
+    --cy-yellow: #ffe600;
+    --cy-bg: #080808;
+    --cy-panel: #131313;
+    --cy-text: #d0d0d0;
+    --cy-muted: #888888;
+
+    background: var(--cy-bg);
+    color: var(--cy-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============================
+   HERO
+============================ */
+
+.cyber-hero {
+    min-height: 440px;
+    padding: 75px 10%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.97),
+            rgba(0, 0, 0, 0.82) 65%,
+            rgba(0, 0, 0, 0.55)),
+        linear-gradient(135deg, #252500, #101010, #292929);
+
+    border-bottom: 1px solid var(--cy-yellow);
+}
+
+.cyber-hero::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border: 1px solid rgba(255, 230, 0, 0.12);
+    box-shadow: 0 0 60px rgba(255, 230, 0, 0.03);
+}
+
+.cyber-hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 1;
+}
+
+.cyber-label {
+    display: block;
+    color: var(--cy-yellow);
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.cyber-hero h1 {
+    color: var(--cy-yellow);
+    font-size: clamp(55px, 9vw, 110px);
+    letter-spacing: -5px;
+    line-height: 0.95;
+    margin: 0;
+    font-weight: 900;
+}
+
+.cyber-hero h2 {
+    font-size: clamp(20px, 3vw, 30px);
+    color: white;
+    margin-top: 25px;
+}
+
+.cyber-hero p {
+    max-width: 550px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cy-text);
+    margin: 20px 0 30px;
+}
+
+.cyber-button {
+    display: inline-block;
+    padding: 14px 22px;
+    border: 1px solid var(--cy-yellow);
+    color: var(--cy-yellow);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cyber-button:hover {
+    background: var(--cy-yellow);
+    color: #000;
+}
+
+.cyber-hero-tag {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+/* ============================
+   SECCIONES GENERALES
+============================ */
+
+.cyber-section {
+    padding: 80px 10%;
+}
+
+.cyber-title {
+    border-left: 3px solid var(--cy-yellow);
+    padding-left: 18px;
+    margin-bottom: 40px;
+}
+
+.cyber-title span {
+    color: var(--cy-yellow);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.cyber-title h2 {
+    color: white;
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 12px 0 0;
+}
+
+.cyber-section-description {
+    color: var(--cy-muted);
+    max-width: 750px;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+/* ============================
+   INTRODUCCIÓN
+============================ */
+
+.cyber-intro-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.cyber-intro-text h3 {
+    color: var(--cy-yellow);
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.cyber-intro-text p {
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* PANEL DE INFORMACIÓN */
+
+.cyber-info-panel {
+    background: var(--cy-panel);
+    border: 1px solid #303030;
+    padding: 25px;
+    position: relative;
+}
+
+.cyber-panel-header {
+    display: block;
+    color: var(--cy-yellow);
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.cyber-data-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 17px 0;
+    border-bottom: 1px solid #292929;
+}
+
+.cyber-data-row span {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.cyber-data-row strong {
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.cyber-panel-warning {
+    margin-top: 20px;
+    padding: 12px;
+    text-align: center;
+    color: var(--cy-yellow);
+    background: rgba(255, 230, 0, 0.06);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* ============================
+   FUNCIONAMIENTO
+============================ */
+
+.cyber-how {
+    background: #0e0e0e;
+}
+
+.cyber-process {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.cyber-process-card {
+    flex: 1;
+    padding: 25px;
+    background: #151515;
+    border: 1px solid #303030;
+    transition: 0.3s;
+}
+
+.cyber-process-card:hover {
+    border-color: var(--cy-yellow);
+    transform: translateY(-4px);
+}
+
+.cyber-process-card > span {
+    color: var(--cy-yellow);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.cyber-process-card h3 {
+    color: white;
+    font-size: 21px;
+    margin: 20px 0;
+}
+
+.cyber-process-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--cy-text);
+}
+
+.cyber-process-line {
+    width: 25px;
+    align-self: center;
+    height: 1px;
+    background: var(--cy-yellow);
+}
+
+/* ============================
+   TIPOS DE CIBERWARE
+============================ */
+
+.cyber-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.cyber-type-card {
+    min-height: 230px;
+    padding: 25px;
+    background: linear-gradient(145deg, #191919, #101010);
+    border: 1px solid #303030;
+    transition: 0.3s;
+}
+
+.cyber-type-card:hover {
+    border-color: var(--cy-yellow);
+    background: #1c1c14;
+    transform: translateY(-4px);
+}
+
+.cyber-type-number {
+    color: var(--cy-yellow);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.cyber-type-card h3 {
+    color: white;
+    font-size: 21px;
+    margin: 20px 0 12px;
+}
+
+.cyber-type-card p {
+    color: var(--cy-text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.cyber-type-tag {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--cy-yellow);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+}
+
+/* ============================
+   IMPLANTES CONOCIDOS
+============================ */
+
+.cyber-examples {
+    background: #0e0e0e;
+}
+
+.cyber-example-list {
+    border-top: 1px solid #333;
+}
+
+.cyber-example {
+    display: flex;
+    gap: 30px;
+    padding: 30px 20px;
+    border-bottom: 1px solid #333;
+    transition: 0.3s;
+}
+
+.cyber-example:hover {
+    background: #171717;
+}
+
+.cyber-example-number {
+    color: var(--cy-yellow);
+    font-size: 22px;
+    font-weight: bold;
+    min-width: 45px;
+}
+
+.cyber-example-content span {
+    color: var(--cy-yellow);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.cyber-example-content h3 {
+    color: white;
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.cyber-example-content p {
+    color: var(--cy-text);
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 850px;
+}
+
+/* ============================
+   BENEFICIOS Y RIESGOS
+============================ */
+
+
+/* ============================
+   BENEFICIOS Y RIESGOS
+============================ */
+
+.cyber-balance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.cyber-balance-card {
+    padding: 35px;
+    background: #151515;
+    border: 1px solid #333;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.cyber-benefits {
+    border-top: 2px solid var(--cy-yellow);
+}
+
+.cyber-risks {
+    border-top: 2px solid #777;
+}
+
+.cyber-balance-label {
+    display: block;
+    color: var(--cy-yellow);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.cyber-risks .cyber-balance-label {
+    color: #aaa;
+}
+
+.cyber-balance-card h3 {
+    color: white;
+    font-size: 23px;
+    margin: 25px 0;
+}
+
+/* CORRECCIÓN DE LAS LISTAS */
+
+.cyber-balance-card ul {
+    display: block !important;
+    width: 100%;
+    padding: 0 0 0 20px;
+    margin: 0;
+    list-style: disc;
+    box-sizing: border-box;
+}
+
+.cyber-balance-card li {
+    display: list-item !important;
+    width: auto !important;
+    margin: 0 0 16px 0;
+    padding: 0;
+    color: var(--cy-text);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+    float: none !important;
+    box-sizing: border-box;
+}
+
+.cyber-benefits li::marker {
+    color: var(--cy-yellow);
+}
+
+.cyber-risks li::marker {
+    color: #888;
+}
+
+
+/* ============================
+   CYBERPSICOSIS
+============================ */
+
+.cyber-psycho {
+    background: #0e0e0e;
+}
+
+.cyber-psycho-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.cyber-psycho-main h3 {
+    color: var(--cy-yellow);
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.cyber-psycho-main p {
+    color: var(--cy-text);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.cyber-psycho-warning {
+    padding: 35px;
+    border: 1px solid #454000;
+    background: linear-gradient(145deg, #201e0b, #141414);
+}
+
+.cyber-psycho-warning span {
+    color: var(--cy-yellow);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.cyber-psycho-warning h3 {
+    color: white;
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.5;
+    margin: 25px 0;
+}
+
+.cyber-psycho-warning p {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* ============================
+   CIERRE
+============================ */
+
+.cyber-ending {
+    padding: 90px 10%;
+    text-align: center;
+    border-top: 1px solid #333;
+
+    background: linear-gradient(135deg, #201d05, #080808 65%);
+}
+
+.cyber-ending > span {
+    color: var(--cy-yellow);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.cyber-ending h2 {
+    color: white;
+    font-size: clamp(32px, 6vw, 65px);
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.cyber-ending p {
+    color: var(--cy-text);
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 900px) {
+
+    .cyber-intro-grid,
+    .cyber-psycho-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cyber-process {
+        flex-direction: column;
+    }
+
+    .cyber-process-line {
+        width: 1px;
+        height: 20px;
+        align-self: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .cyber-hero {
+        padding: 60px 7%;
+    }
+
+    .cyber-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .cyber-hero-tag {
+        right: 15px;
+        font-size: 8px;
+    }
+
+    .cyber-section {
+        padding: 55px 7%;
+    }
+
+    .cyber-types-grid,
+    .cyber-balance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cyber-type-card {
+        min-height: auto;
+    }
+
+    .cyber-example {
+        gap: 15px;
+        padding: 25px 10px;
+    }
+
+    .cyber-example-content h3 {
+        font-size: 21px;
+    }
+
+    .cyber-balance-card {
+        padding: 25px;
+    }
+
+    .cyber-ending {
+        padding: 65px 7%;
+    }
+
+    .cyber-ending > span {
+        letter-spacing: 2px;
+    }
+
+}

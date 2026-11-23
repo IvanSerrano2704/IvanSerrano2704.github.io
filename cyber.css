@@ -231,3 +231,128 @@ footer{
         gap: 5px;
     }
 }
+
+
+
+
+
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+:root {
+    --black: #080808;
+    --panel: #111111;
+    --yellow: #ffe600;
+    --white: #eeeeee;
+    --gray: #888888;
+    --border: #292929;
+}
+
+.inicio {
+    width: 80%;
+    margin: 60px auto;
+    color: #D0D0D0;
+}
+
+/* PRESENTACIÓN */
+
+.presentacion {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.subtitulo {
+    color: #FFE600;
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.presentacion h1 {
+    font-size: 60px;
+    margin: 20px 0;
+    color: #D0D0D0;
+}
+
+.presentacion h1 span {
+    color: #FFE600;
+}
+
+.linea {
+    width: 80px;
+    height: 3px;
+    background-color: #FFE600;
+    margin: 25px auto;
+}
+
+.descripcion {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+    color: #AAAAAA;
+    font-size: 16px;
+}
+
+
+/* CURIOSIDAD */
+
+.curiosidad {
+    background-color: #111720;
+    border-left: 3px solid #FFE600;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.curiosidad h2 {
+    color: #FFE600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.curiosidad p {
+    color: #AAAAAA;
+    line-height: 1.8;
+}
+
+
+/* FRASE */
+
+.frase {
+    text-align: center;
+    margin: 70px 0;
+}
+
+.frase p {
+    color: #FFE600;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .inicio {
+        width: 90%;
+    }
+
+    .presentacion h1 {
+        font-size: 36px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+
+    .curiosidad {
+        padding: 20px;
+    }
+
+    .frase p {
+        font-size: 16px;
+    }
+
+}
