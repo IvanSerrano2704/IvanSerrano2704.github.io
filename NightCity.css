@@ -64,21 +64,6 @@ body{
     box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
 }
 
-/* MÓVILES */
-
-@media (max-width: 750px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .navegacion {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-}
-
 
 .footer {
     background-color: #080808;
@@ -156,26 +141,6 @@ body{
     letter-spacing: 2px;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 700px) {
-    .footer-contenido {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .footer-final {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-}
-
-
-
-/* =========================
-   NIGHT CITY - ESTILOS
-========================= */
 
 .nc-page {
     --nc-yellow: #ffe600;
@@ -189,9 +154,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   HERO / PORTADA
-========================= */
+
 
 .nc-hero {
     min-height: 440px;
@@ -211,7 +174,7 @@ body{
     border-bottom: 1px solid var(--nc-yellow);
 }
 
-/* Decoración de líneas */
+
 .nc-hero::after {
     content: "";
     position: absolute;
@@ -271,9 +234,6 @@ body{
     color: #000;
 }
 
-/* =========================
-   SECCIONES GENERALES
-========================= */
 
 .nc-section {
     padding: 80px 10%;
@@ -305,9 +265,6 @@ body{
     margin-bottom: 35px;
 }
 
-/* =========================
-   INTRODUCCIÓN
-========================= */
 
 .nc-intro {
     display: grid;
@@ -357,10 +314,6 @@ body{
     color: var(--nc-yellow);
     letter-spacing: 2px;
 }
-
-/* =========================
-   CONTRASTES
-========================= */
 
 .nc-contrast {
     background-color: #0d0d0d;
@@ -413,10 +366,6 @@ body{
         linear-gradient(145deg, #222222, #101010 55%);
 }
 
-/* =========================
-   CORPORACIONES
-========================= */
-
 .nc-corp-content {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
@@ -449,10 +398,6 @@ body{
     color: var(--nc-yellow);
     margin-top: 25px;
 }
-
-/* =========================
-   DISTRITOS
-========================= */
 
 .nc-districts {
     background-color: #0d0d0d;
@@ -495,10 +440,6 @@ body{
     font-size: 14px;
 }
 
-/* =========================
-   VIDA EN NIGHT CITY
-========================= */
-
 .nc-life-content {
     max-width: 850px;
 }
@@ -512,10 +453,6 @@ body{
     font-weight: bold;
     margin-top: 35px;
 }
-
-/* =========================
-   CIERRE
-========================= */
 
 .nc-ending {
     padding: 90px 10%;
@@ -543,59 +480,4 @@ body{
     color: var(--nc-text);
     font-size: 16px;
     line-height: 1.8;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 850px) {
-
-    .nc-intro,
-    .nc-corp-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .nc-hero {
-        padding: 60px 7%;
-    }
-
-    .nc-section {
-        padding: 60px 7%;
-    }
-
-    .nc-contrast-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media (max-width: 550px) {
-
-    .nc-hero h1 {
-        letter-spacing: -2px;
-    }
-
-    .nc-subtitle {
-        font-size: 16px;
-    }
-
-    .nc-district-list {
-        grid-template-columns: 1fr;
-    }
-
-    .nc-contrast-card,
-    .nc-corp-highlight {
-        padding: 25px;
-    }
-
-    .nc-ending {
-        padding: 65px 7%;
-    }
-
-    .nc-ending span {
-        letter-spacing: 2px;
-    }
-
 }

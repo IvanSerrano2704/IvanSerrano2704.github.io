@@ -64,20 +64,6 @@ body{
     box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
 }
 
-/* MÓVILES */
-
-@media (max-width: 750px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .navegacion {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-}
 
 
 .footer {
@@ -156,27 +142,6 @@ body{
     letter-spacing: 2px;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 700px) {
-    .footer-contenido {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .footer-final {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-}
-
-
-
-/* ============================
-   CYBERWARE - ESTILO GENERAL
-============================ */
-
 .cyber-page {
     --cy-yellow: #ffe600;
     --cy-bg: #080808;
@@ -188,10 +153,6 @@ body{
     color: var(--cy-text);
     font-family: Arial, Helvetica, sans-serif;
 }
-
-/* ============================
-   HERO
-============================ */
 
 .cyber-hero {
     min-height: 440px;
@@ -289,10 +250,6 @@ body{
     color: #777;
 }
 
-/* ============================
-   SECCIONES GENERALES
-============================ */
-
 .cyber-section {
     padding: 80px 10%;
 }
@@ -323,10 +280,6 @@ body{
     margin-bottom: 35px;
 }
 
-/* ============================
-   INTRODUCCIÓN
-============================ */
-
 .cyber-intro-grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -346,8 +299,6 @@ body{
     font-size: 15px;
     margin-bottom: 20px;
 }
-
-/* PANEL DE INFORMACIÓN */
 
 .cyber-info-panel {
     background: var(--cy-panel);
@@ -395,10 +346,6 @@ body{
     font-size: 10px;
     letter-spacing: 2px;
 }
-
-/* ============================
-   FUNCIONAMIENTO
-============================ */
 
 .cyber-how {
     background: #0e0e0e;
@@ -448,10 +395,6 @@ body{
     background: var(--cy-yellow);
 }
 
-/* ============================
-   TIPOS DE CIBERWARE
-============================ */
-
 .cyber-types-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -500,10 +443,6 @@ body{
     padding-top: 12px;
 }
 
-/* ============================
-   IMPLANTES CONOCIDOS
-============================ */
-
 .cyber-examples {
     background: #0e0e0e;
 }
@@ -550,15 +489,6 @@ body{
     max-width: 850px;
 }
 
-/* ============================
-   BENEFICIOS Y RIESGOS
-============================ */
-
-
-/* ============================
-   BENEFICIOS Y RIESGOS
-============================ */
-
 .cyber-balance-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -599,8 +529,6 @@ body{
     margin: 25px 0;
 }
 
-/* CORRECCIÓN DE LAS LISTAS */
-
 .cyber-balance-card ul {
     display: block !important;
     width: 100%;
@@ -630,11 +558,6 @@ body{
 .cyber-risks li::marker {
     color: #888;
 }
-
-
-/* ============================
-   CYBERPSICOSIS
-============================ */
 
 .cyber-psycho {
     background: #0e0e0e;
@@ -684,11 +607,6 @@ body{
     line-height: 1.8;
     font-size: 14px;
 }
-
-/* ============================
-   CIERRE
-============================ */
-
 .cyber-ending {
     padding: 90px 10%;
     text-align: center;
@@ -714,82 +632,4 @@ body{
     color: var(--cy-text);
     line-height: 1.8;
     font-size: 15px;
-}
-
-/* ============================
-   RESPONSIVE
-============================ */
-
-@media (max-width: 900px) {
-
-    .cyber-intro-grid,
-    .cyber-psycho-content {
-        grid-template-columns: 1fr;
-    }
-
-    .cyber-types-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cyber-process {
-        flex-direction: column;
-    }
-
-    .cyber-process-line {
-        width: 1px;
-        height: 20px;
-        align-self: center;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    .cyber-hero {
-        padding: 60px 7%;
-    }
-
-    .cyber-hero h1 {
-        letter-spacing: -2px;
-    }
-
-    .cyber-hero-tag {
-        right: 15px;
-        font-size: 8px;
-    }
-
-    .cyber-section {
-        padding: 55px 7%;
-    }
-
-    .cyber-types-grid,
-    .cyber-balance-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cyber-type-card {
-        min-height: auto;
-    }
-
-    .cyber-example {
-        gap: 15px;
-        padding: 25px 10px;
-    }
-
-    .cyber-example-content h3 {
-        font-size: 21px;
-    }
-
-    .cyber-balance-card {
-        padding: 25px;
-    }
-
-    .cyber-ending {
-        padding: 65px 7%;
-    }
-
-    .cyber-ending > span {
-        letter-spacing: 2px;
-    }
-
 }

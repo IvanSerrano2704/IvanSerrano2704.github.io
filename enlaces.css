@@ -210,24 +210,6 @@ div>a{
     color: #080808;
     box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
 }
-
-/* MÓVILES */
-
-@media (max-width: 750px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .navegacion {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-}
-
-
-
 .footer {
     background-color: #080808;
     border-top: 2px solid #ffe600;
@@ -304,17 +286,3 @@ div>a{
     letter-spacing: 2px;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 700px) {
-    .footer-contenido {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .footer-final {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-}

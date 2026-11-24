@@ -1,3 +1,13 @@
+
+:root {
+    --black: #080808;
+    --panel: #111111;
+    --yellow: #ffe600;
+    --white: #eeeeee;
+    --gray: #888888;
+    --border: #292929;
+}
+
 body{
     margin: auto;
     color: white;
@@ -6,10 +16,6 @@ body{
 main{
     width: 1200px;
     margin: auto;
-}
-li>a{
-    color:black;
-    text-decoration: none;
 }
 a{
     color:cyan;
@@ -20,15 +26,7 @@ h2{
 strong{
     color:lemonchiffon
 }
-li{
-    display:inline-block;
-    width: 20%;
-    text-align:center;
-}
 
-ol{
-    padding: 0px;
-}
 footer{
     background-color:yellow;
     border-top: 4px solid cyan;
@@ -40,28 +38,6 @@ footer{
     text-align: left;
     vertical-align: bottom;
 }
-
-
-.material-symbols-outlined {
-         font-variation-settings:
-         'FILL' 0,
-          'wght' 400,
-            'GRAD' 0,
-          'opsz' 24
-        }  
-#volver-al-menu{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-size: 50px;
-    color: gold;
-} 
-#migajillas{
-    text-align: left;
-    margin: 10px;
-    color:inherit
-}
-
 
 .header {
     background-color: #080808;
@@ -122,21 +98,6 @@ footer{
     background-color: #ffe600;
     color: #080808;
     box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
-}
-
-/* MÓVILES */
-
-@media (max-width: 750px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .navegacion {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
 }
 
 
@@ -217,46 +178,11 @@ footer{
     letter-spacing: 2px;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 700px) {
-    .footer-contenido {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .footer-final {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-}
-
-
-
-
-
-
-/* ==============================
-   CONFIGURACIÓN GENERAL
-================================= */
-
-:root {
-    --black: #080808;
-    --panel: #111111;
-    --yellow: #ffe600;
-    --white: #eeeeee;
-    --gray: #888888;
-    --border: #292929;
-}
-
 .inicio {
     width: 80%;
     margin: 60px auto;
     color: #D0D0D0;
 }
-
-/* PRESENTACIÓN */
 
 .presentacion {
     text-align: center;
@@ -294,9 +220,6 @@ footer{
     font-size: 16px;
 }
 
-
-/* CURIOSIDAD */
-
 .curiosidad {
     background-color: #111720;
     border-left: 3px solid #FFE600;
@@ -315,9 +238,6 @@ footer{
     line-height: 1.8;
 }
 
-
-/* FRASE */
-
 .frase {
     text-align: center;
     margin: 70px 0;
@@ -328,31 +248,4 @@ footer{
     font-size: 20px;
     font-weight: bold;
     line-height: 1.8;
-}
-
-
-/* RESPONSIVE */
-
-@media (max-width: 600px) {
-
-    .inicio {
-        width: 90%;
-    }
-
-    .presentacion h1 {
-        font-size: 36px;
-    }
-
-    .descripcion {
-        font-size: 14px;
-    }
-
-    .curiosidad {
-        padding: 20px;
-    }
-
-    .frase p {
-        font-size: 16px;
-    }
-
 }
