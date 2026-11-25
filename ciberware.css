@@ -238,18 +238,6 @@ body{
     color: #000;
 }
 
-.cyber-hero-tag {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: #777;
-}
-
 .cyber-section {
     padding: 80px 10%;
 }
