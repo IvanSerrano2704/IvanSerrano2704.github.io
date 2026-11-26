@@ -1,8 +1,342 @@
-body{
-    margin: auto;
-    color: white;
+body {
     background-color: black;
+    color: #ffffff;
+    font-family: Georgia, serif;
 }
+
+.breadcrumb {
+    width: 95%;
+    margin: 20px auto;
+    padding: 12px 18px;
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+}
+
+.breadcrumb a {
+    color: #ffe600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.breadcrumb span {
+    color: #777;
+    margin: 0 5px;
+}
+
+.breadcrumb .breadcrumb-actual {
+    color: #aaa;
+}
+
+.breadcrumb a:hover {
+    color: white;
+}
+
+/* ==============================
+   ARCHIVO DE PERSONAJES
+================================= */
+
+.personajes-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 60px auto;
+    color: #e5e5e5;
+    font-family: inherit;
+}
+
+.personajes-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.personajes-intro h1 {
+    color: #ffe600;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.personajes-intro p {
+    color: #aaa;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   SECCIONES
+================================= */
+
+.universo-personajes {
+    margin-bottom: 80px;
+}
+
+.universo-personajes h2 {
+    color: #ffe600;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    border-left: 5px solid #ffe600;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   GRID
+================================= */
+
+.personajes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* ==============================
+   TARJETAS
+================================= */
+
+.personaje {
+    background: #111;
+    border: 1px solid #292929;
+    border-bottom: 3px solid #ffe600;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.personaje:hover {
+    border-color: #ffe600;
+    transform: translateY(-4px);
+}
+
+
+/* El summary funciona como cabecera clicable */
+
+.personaje summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.personaje summary::-webkit-details-marker {
+    display: none;
+}
+
+.personaje summary img,
+.personaje > img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(20%);
+    transition: filter 0.3s;
+}
+
+.personaje:hover summary img,
+.personaje[open] summary img {
+    filter: grayscale(0%);
+}
+
+
+/* ==============================
+   INFORMACIÓN
+================================= */
+
+.personaje-info {
+    padding: 20px;
+}
+
+.personaje-info h3 {
+    color: #ffe600;
+    font-size: 1.25rem;
+    margin: 0 0 12px;
+    letter-spacing: 1px;
+}
+
+.personaje-info p {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+
+/* Texto de desplegar */
+
+.abrir-lore {
+    display: inline-block;
+    color: #ffe600;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-top: 1px solid #333;
+    padding-top: 12px;
+    width: 100%;
+    transition: color 0.3s;
+}
+
+.personaje:hover .abrir-lore {
+    color: #fff;
+}
+
+
+/* Cambia el texto al abrir la tarjeta */
+
+.abrir-lore::after {
+    content: "";
+}
+
+.personaje[open] .abrir-lore {
+    color: #fff;
+}
+
+.personaje[open] .abrir-lore::after {
+    content: "";
+}
+
+
+/* ==============================
+   LORE DESPLEGABLE
+================================= */
+
+.lore {
+    padding: 0 20px 25px;
+    border-top: 1px solid #333;
+    animation: aparecerLore 0.3s ease;
+}
+
+.lore h4 {
+    color: #ffe600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 0 15px;
+}
+
+.lore p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* Animación de apertura */
+
+@keyframes aparecerLore {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================
+   EDGERUNNERS 2
+================================= */
+
+.edgerunners2-intro {
+    margin-bottom: 30px;
+}
+
+.edgerunners2-banner {
+    background: linear-gradient(135deg, #151515, #242000);
+    border: 1px solid #ffe600;
+    padding: 30px;
+}
+
+.edgerunners2-banner h3 {
+    color: #ffe600;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.edgerunners2-banner p {
+    color: #ccc;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.personaje-pendiente {
+    opacity: 0.85;
+}
+
+.personaje-pendiente img {
+    object-position: center;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+/* Tablets */
+
+@media (max-width: 1000px) {
+    .personajes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .personaje summary img,
+    .personaje > img {
+        height: 340px;
+    }
+}
+
+
+/* Móviles */
+
+@media (max-width: 650px) {
+    .personajes-container {
+        width: 94%;
+        margin: 35px auto;
+    }
+
+    .personajes-intro h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .universo-personajes h2 {
+        font-size: 1.5rem;
+    }
+
+    .personajes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .personaje summary img,
+    .personaje > img {
+        height: 350px;
+    }
+
+    .personaje-info {
+        padding: 18px;
+    }
+
+    .edgerunners2-banner {
+        padding: 20px;
+    }
+}
+
+
+
+
 .header {
     background-color: #080808;
     border-bottom: 2px solid #ffe600;
@@ -46,16 +380,15 @@ body{
     transition: 0.3s;
 }
 
-.navegacion a:hover {
+.activo a:hover {
     color: #ffe600;
     text-shadow: 0 0 10px #ffe600;
 }
-.navegacion a.activo {
+.navegacion .activo {
     border: 1px solid #ffe600;
     padding: 9px 16px;
     border-radius: 5px;
     color: #ffe600;
-    box-shadow: 0 0 10px rgba(255, 230, 0, 0.2);
 }
 
 .navegacion .activo:hover {
@@ -63,75 +396,6 @@ body{
     color: #080808;
     box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
 }
-
-/* MÓVILES */
-
-@media (max-width: 750px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .navegacion {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-}
-
-
-
-
-.tarjeta-personaje {
-    background-color: #111111;
-    border: 1px solid #ffe600;
-    border-radius: 8px;
-    overflow: hidden;
-    color: #d0d0d0;
-}
-
-.tarjeta-personaje details {
-    width: 100%;
-}
-
-.tarjeta-personaje summary {
-    cursor: pointer;
-    list-style: none;
-    padding: 15px;
-    text-align: center;
-}
-
-.tarjeta-personaje summary::-webkit-details-marker {
-    display: none;
-}
-
-.tarjeta-personaje img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-}
-
-.tarjeta-personaje h3 {
-    color: #ffe600;
-}
-
-.tarjeta-personaje span {
-    display: block;
-    color: #ffe600;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-.lore {
-    padding: 20px;
-    border-top: 1px solid #ffe600;
-    background-color: #080808;
-}
-
-.lore h4 {
-    color: #ffe600;
-}
-
 
 
 
@@ -210,19 +474,4 @@ body{
 .footer-final p:last-child {
     color: #ffe600;
     letter-spacing: 2px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 700px) {
-    .footer-contenido {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .footer-final {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
 }
