@@ -230,3 +230,33 @@ form button span {
     text-align: left;
     vertical-align: bottom;
 }
+
+.breadcrumb {
+    width: 95%;
+    margin: 20px auto;
+    padding: 12px 18px;
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+}
+
+.breadcrumb a {
+    color: #ffe600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.breadcrumb span {
+    color: #777;
+    margin: 0 5px;
+}
+
+.breadcrumb .breadcrumb-actual {
+    color: #aaa;
+}
+
+.breadcrumb a:hover {
+    color: white;
+}

@@ -280,59 +280,6 @@ body {
 }
 
 
-/* ==============================
-   RESPONSIVE
-================================= */
-
-/* Tablets */
-
-@media (max-width: 1000px) {
-    .personajes-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .personaje summary img,
-    .personaje > img {
-        height: 340px;
-    }
-}
-
-
-/* Móviles */
-
-@media (max-width: 650px) {
-    .personajes-container {
-        width: 94%;
-        margin: 35px auto;
-    }
-
-    .personajes-intro h1 {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
-    }
-
-    .universo-personajes h2 {
-        font-size: 1.5rem;
-    }
-
-    .personajes-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .personaje summary img,
-    .personaje > img {
-        height: 350px;
-    }
-
-    .personaje-info {
-        padding: 18px;
-    }
-
-    .edgerunners2-banner {
-        padding: 20px;
-    }
-}
 
 
 
