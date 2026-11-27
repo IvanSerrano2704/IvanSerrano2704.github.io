@@ -1,25 +1,51 @@
-
 body {
     background-color: black;
     color: #ffffff;
     font-family: Georgia, serif;
+
+  
+    --accent: #ffe600;
+    --accent-secondary: #ffe600;
 }
-/* ==============================
-   DISTRITOS - NIGHT CITY
-============================== */
+
+
+body.city-center {
+    --accent: #00bfff;
+    --accent-secondary: #66e5ff;
+}
+
+
+body.watson {
+    --accent: #ff334f;
+    --accent-secondary: #ff7185;
+}
+
+
+body.westbrook {
+    --accent: #bd75ff;
+    --accent-secondary: #e0baff;
+}
+body.heywood {
+    --accent: #ff8a32;
+    --accent-secondary: #ffbf78;
+}
+body.pacifica {
+    --accent: #00e5d4;
+    --accent-secondary: #83fff3;
+}
+
+body.santo-domingo {
+    --accent: #ffb000;
+    --accent-secondary: #ffda70;
+}
 
 .distrito-page {
-    --accent: #00e5ff;
-    --accent-secondary: #ffcc00;
-
     color: #e6e6e6;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1150px;
     margin: 0 auto;
     padding: 35px 20px 60px;
 }
-
-/* Cabecera del distrito */
 
 .distrito-hero {
     padding: 35px;
@@ -49,8 +75,6 @@ body {
     color: #c5c5c5;
 }
 
-/* Contenido general */
-
 .distrito-section {
     margin: 40px 0;
 }
@@ -75,8 +99,6 @@ body {
     color: #c9c9c9;
     margin: 12px 0;
 }
-
-/* Bloques de contenido */
 
 .distrito-grid {
     display: grid;
@@ -107,8 +129,8 @@ body {
     margin-bottom: 0;
 }
 
-/* Bandas */
 
+/* Bandas */
 
 .distrito-banda {
     background: #121212;
@@ -126,20 +148,17 @@ body {
     margin-bottom: 0;
 }
 
-/* Lugares destacados */
-
 .distrito-lugar {
     padding: 16px 20px;
     margin: 12px 0;
     background: #1c1c1c;
-    border-left: 2px solid #555;
+    border-left: 2px solid var(--accent);
 }
 
 .distrito-lugar h3 {
     margin: 0 0 8px;
 }
 
-/* Caja final */
 
 .distrito-cierre {
     margin-top: 40px;
@@ -161,31 +180,10 @@ body {
     font-style: italic;
 }
 
-/* Adaptación a móviles */
-
-@media (max-width: 700px) {
-    .distrito-page {
-        padding: 20px 12px 40px;
-    }
-
-    .distrito-hero {
-        padding: 24px 18px;
-    }
-
-    .distrito-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .distrito-section h2 {
-        font-size: 20px;
-    }
-}
-
-
 
 .header {
     background-color: #080808;
-    border-bottom: 2px solid #ffe600;
+    border-bottom: 2px solid var(--accent);
     padding: 18px 30px;
     margin: 0;
     width: 100%;
@@ -195,29 +193,35 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: 0 3px 15px rgba(255, 230, 0, 0.2);
+    box-shadow: 0 3px 15px color-mix(in srgb, var(--accent) 20%, transparent);
 }
+
 .header-logo h1 {
     color: #ffffff;
     font-size: 23px;
     letter-spacing: 2px;
     margin: 0;
 }
+
 .header-logo h1 span {
-    color: #ffe600;
-    text-shadow: 0 0 10px rgba(255, 230, 0, 0.5);
+    color: var(--accent);
+    text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 50%, transparent);
 }
+
 .header-logo p {
-    color: #ffe600;
+    color: var(--accent);
     font-size: 9px;
     letter-spacing: 3px;
     margin: 5px 0 0;
 }
+
+
 .navegacion {
     display: flex;
     align-items: center;
     gap: 25px;
 }
+
 .navegacion a {
     color: #d0d0d0;
     text-decoration: none;
@@ -227,32 +231,37 @@ body {
 }
 
 .navegacion a:hover {
-    color: #ffe600;
-    text-shadow: 0 0 10px #ffe600;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
 }
+
 .navegacion a.activo {
-    border: 1px solid #ffe600;
+    border: 1px solid var(--accent);
     padding: 9px 16px;
     border-radius: 5px;
-    color: #ffe600;
-    box-shadow: 0 0 10px rgba(255, 230, 0, 0.2);
+    color: var(--accent);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 .navegacion .activo:hover {
-    background-color: #ffe600;
+    background-color: var(--accent);
     color: #080808;
-    box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
+    box-shadow: 0 0 15px color-mix(in srgb, var(--accent) 60%, transparent);
 }
+
+
 .footer {
     background-color: #080808;
-    border-top: 2px solid #ffe600;
+    border-top: 2px solid var(--accent);
     margin: 0;
     margin-top: 60px;
     padding: 40px 30px 15px;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0 -5px 20px rgba(255, 230, 0, 0.12);
+
+    box-shadow: 0 -5px 20px color-mix(in srgb, var(--accent) 12%, transparent);
 }
+
 .footer-contenido {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -261,26 +270,31 @@ body {
     margin: auto;
     padding-bottom: 30px;
 }
+
 .footer-info h2 {
     color: white;
     font-size: 24px;
     letter-spacing: 2px;
 }
+
 .footer-info h2 span {
-    color: #ffe600;
+    color: var(--accent);
 }
+
 .footer-info p {
     color: #aaa;
     font-size: 13px;
     line-height: 1.6;
     max-width: 300px;
 }
+
 .footer h3 {
-    color: #ffe600;
+    color: var(--accent);
     font-size: 14px;
     margin-bottom: 18px;
     letter-spacing: 1px;
 }
+
 .footer-enlaces a {
     display: block;
     color: #aaa;
@@ -289,16 +303,20 @@ body {
     margin-bottom: 12px;
     transition: 0.3s;
 }
+
 .footer-enlaces a:hover {
-    color: #ffe600;
+    color: var(--accent);
     padding-left: 5px;
-    text-shadow: 0 0 8px #ffe600;
+    text-shadow: 0 0 8px var(--accent);
 }
+
 .footer-extra p {
     color: #aaa;
     font-size: 13px;
     line-height: 1.6;
 }
+
+
 .footer-final {
     border-top: 1px solid #444;
     padding-top: 15px;
@@ -315,7 +333,7 @@ body {
 }
 
 .footer-final p:last-child {
-    color: #ffe600;
+    color: var(--accent);
     letter-spacing: 2px;
 }
 
@@ -331,7 +349,7 @@ body {
 }
 
 .breadcrumb a {
-    color: #ffe600;
+    color: var(--accent);
     text-decoration: none;
     font-weight: bold;
 }
@@ -347,4 +365,55 @@ body {
 
 .breadcrumb a:hover {
     color: white;
+}
+
+
+
+body.city-center .header {
+    border-bottom: 5px solid #00bfff !important;
+}
+
+body.city-center .footer {
+    border-top: 5px solid #00bfff !important;
+}
+
+body.watson .header {
+    border-bottom: 5px solid red !important;
+}
+
+body.watson .footer {
+    border-top: 5px solid red !important;
+}
+
+body.westbrook .header {
+    border-bottom: 5px solid #bd75ff !important;
+}
+
+body.westbrook .footer {
+    border-top: 5px solid #bd75ff !important;
+}
+
+
+body.heywood .header {
+    border-bottom: 5px solid #ff8a32 !important;
+}
+
+body.heywood .footer {
+    border-top: 5px solid #ff8a32 !important;
+}
+
+body.pacifica .header {
+    border-bottom: 5px solid #00e5d4 !important;
+}
+
+body.pacifica .footer {
+    border-top: 5px solid #00e5d4 !important;
+}
+
+body.santo-domingo .header {
+    border-bottom: 5px solid #ffb000 !important;
+}
+
+body.santo-domingo .footer {
+    border-top: 5px solid #ffb000 !important;
 }
