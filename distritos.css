@@ -1,0 +1,182 @@
+
+body {
+    background-color: black;
+    color: #ffffff;
+    font-family: Georgia, serif;
+}
+/* ==============================
+   DISTRITOS - NIGHT CITY
+============================== */
+
+.distrito-page {
+    --accent: #00e5ff;
+    --accent-secondary: #ffcc00;
+
+    color: #e6e6e6;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 35px 20px 60px;
+}
+
+/* Cabecera del distrito */
+
+.distrito-hero {
+    padding: 35px;
+    margin-bottom: 35px;
+    border-left: 5px solid var(--accent);
+    background: linear-gradient(120deg, #151515, #202020);
+    box-shadow: 0 0 18px #00000050;
+}
+
+.distrito-tag {
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.distrito-hero h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    margin: 12px 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.distrito-hero p {
+    line-height: 1.8;
+    max-width: 850px;
+    color: #c5c5c5;
+}
+
+/* Contenido general */
+
+.distrito-section {
+    margin: 40px 0;
+}
+
+.distrito-section h2 {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.distrito-section h3 {
+    color: var(--accent-secondary);
+    margin: 22px 0 10px;
+}
+
+.distrito-section p {
+    line-height: 1.85;
+    color: #c9c9c9;
+    margin: 12px 0;
+}
+
+/* Bloques de contenido */
+
+.distrito-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.distrito-card {
+    background: #171717;
+    border: 1px solid #303030;
+    border-top: 3px solid var(--accent);
+    padding: 24px;
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.distrito-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.distrito-card h3 {
+    margin-top: 0;
+    color: var(--accent-secondary);
+}
+
+.distrito-card p {
+    margin-bottom: 0;
+}
+
+/* Bandas */
+
+
+.distrito-banda {
+    background: #121212;
+    padding: 22px;
+    border-left: 3px solid var(--accent-secondary);
+    margin: 18px 0;
+}
+
+.distrito-banda h3 {
+    margin-top: 0;
+    color: var(--accent-secondary);
+}
+
+.distrito-banda p {
+    margin-bottom: 0;
+}
+
+/* Lugares destacados */
+
+.distrito-lugar {
+    padding: 16px 20px;
+    margin: 12px 0;
+    background: #1c1c1c;
+    border-left: 2px solid #555;
+}
+
+.distrito-lugar h3 {
+    margin: 0 0 8px;
+}
+
+/* Caja final */
+
+.distrito-cierre {
+    margin-top: 40px;
+    padding: 28px;
+    background: #101010;
+    border: 1px solid var(--accent);
+    box-shadow: inset 0 0 20px #00000030;
+}
+
+.distrito-cierre h2 {
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.distrito-cierre p {
+    line-height: 1.8;
+    color: #c9c9c9;
+    font-style: italic;
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 700px) {
+    .distrito-page {
+        padding: 20px 12px 40px;
+    }
+
+    .distrito-hero {
+        padding: 24px 18px;
+    }
+
+    .distrito-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .distrito-section h2 {
+        font-size: 20px;
+    }
+}
