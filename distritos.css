@@ -395,11 +395,11 @@ body.westbrook .footer {
 
 
 body.heywood .header {
-    border-bottom: 5px solid #ff8a32 !important;
+    border-bottom: 5px solid #ffb000 !important;
 }
 
 body.heywood .footer {
-    border-top: 5px solid #ff8a32 !important;
+    border-top: 5px solid #ffb000 !important;
 }
 
 body.pacifica .header {
@@ -411,9 +411,9 @@ body.pacifica .footer {
 }
 
 body.santo-domingo .header {
-    border-bottom: 5px solid #ffb000 !important;
+    border-bottom: 5px solid #ff6b22 !important;
 }
 
 body.santo-domingo .footer {
-    border-top: 5px solid #ffb000 !important;
+    border-top: 5px solid #ff6b22 !important;
 }
